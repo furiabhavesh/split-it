@@ -1,0 +1,7 @@
+/*
+ * This is a manifest file that will be compiled into genio.css, which will include all the files
+ * listed below.
+ * NOTE: File genio/icons when compressed by asset pipeline throws error in IE. Always keep
+ *       it at the end of the list.
+ *
+ *= require ./external/style.css
