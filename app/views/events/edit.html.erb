@@ -1,0 +1,6 @@
+<h1>Update Event</h1>
+
+<%= nested_form_for @event, :url => event_path(@event), :method => :put do |event| -%>
+  <%= render :partial => "form", :locals => {:event => event} %>
+  <%= event.submit "Update event" %>
+<% end %>

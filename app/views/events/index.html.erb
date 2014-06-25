@@ -1,0 +1,30 @@
+<h1>Events</h1>
+<%= link_to "Add new event", new_event_path  %>
+
+<% if @events.present? %>
+  <table border=1>
+    <thead>
+      <th>Name</th>
+      <th>Description</th>
+      <th>Total Cost</th>
+      <th>Payment(s) made</th>
+      <th>Action</th>
+    </thead>
+    <tbody>
+      <% for event in @events %>
+        <tr>
+          <td><%= event.name %></td>
+          <td><%= event.description %></td>
+          <td><%= event.total_cost %></td>
+          <td><%= event.payments.map{|p| "#{p.user.name} = #{p.given_amount}"}.join(", ") %></td>
+          <td>
+            <%= link_to "Edit", edit_event_path(event) %>
+            <%= link_to "Delete", event_path(event), :confirm => "Are you sure ?", :method => :delete %>
+          </td>
+        </tr>
+      <% end %>
+    </tbody>
+  </table>
+<% else %>
+  No events
+<% end %>

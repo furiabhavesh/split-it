@@ -1,0 +1,6 @@
+<h1>Create Event</h1>
+
+<%= nested_form_for @event do |event| %>
+  <%= render :partial => "form", :locals => {:event => event} %>
+  <%= event.submit "Save event" %>
+<% end %>
