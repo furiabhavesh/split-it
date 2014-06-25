@@ -1,0 +1,6 @@
+<h1>Update Event</h1>
+
+<%= form_for @user, :url => user_path(@user), :method => :put do |user| -%>
+  <%= render :partial => "form", :locals => {:user => user} %>
+  <%= user.submit "Update user" %>
+<% end %>

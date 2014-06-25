@@ -1,0 +1,6 @@
+<h1>Create User</h1>
+
+<%= form_for @user do |user| %>
+  <%= render :partial => "form", :locals => {:user => user} %>
+  <%= user.submit "Save user" %>
+<% end %>

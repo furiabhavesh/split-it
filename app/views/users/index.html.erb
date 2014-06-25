@@ -1,0 +1,23 @@
+<h1>Users</h1>
+
+<% if @users.present? %>
+  <table border=1>
+    <thead>
+      <th>Name</th>
+      <th>Action</th>
+    </thead>
+    <tbody>
+      <% for user in @users %>
+        <tr>
+          <td><%= user.name %></td>
+          <td>
+            <%= link_to "Edit", edit_user_path(user) %>
+            <%= link_to "Delete", user_path(user), :confirm => "Are you sure ?", :method => :delete %>
+          </td>
+        </tr>
+      <% end %>
+    </tbody>
+  </table>
+<% else %>
+  No users
+<% end %>
