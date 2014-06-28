@@ -1,0 +1,14 @@
+<div>
+  <br/>
+<% @val.each{|user_id,balance_amount| %>
+  <%= User.find(user_id).name %> = 
+  <% if balance_amount < 0 %>
+    <span style="color:red;"><%= balance_amount %></span>
+  <% elsif balance_amount > 0 %>
+    <span style="color:green;"><%= balance_amount %></span>
+  <% else %>
+    <span><%= balance_amount %></span>
+  <% end %>
+  <br/>
+<% } %>
+</div>

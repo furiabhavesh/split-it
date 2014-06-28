@@ -2,11 +2,17 @@
 <%= event.text_field :description, :placeholder => "Desc." %>
 <%= event.text_field :total_cost, :placeholder => "Total cost" %>
 
+<% if @event.payments.count > 0 %>
+  <%= event.fields_for :payments, @event.payments do |payment_form| %>
+  <%= payment_form.object.user.name %> gave <%= payment_form.object.given_amount %> out of <%= payment_form.object.supposed_to_give_amount %>
+  <%= payment_form.link_to_remove "Remove this payer" %>  
+  <% end %>
+<% end %>
+
 <%= event.fields_for :payments, @event.payments.new do |payment_form| %>
   <%= payment_form.select :user_id, options_for_select(User.all.map{|u|[u.name,u.id]}) %>
   <%= payment_form.text_field :supposed_to_give_amount, :placeholder => "Supposed to give" %>
   <%= payment_form.text_field :given_amount, :placeholder => "Given Amount" %>
-  <%= payment_form.text_field :balance_amount, :placeholder => "Balance amount" %>
   <%= payment_form.link_to_remove "Remove this payer" %>
 <% end %>
 <p><%= event.link_to_add "Add Payer", :payments %></p>

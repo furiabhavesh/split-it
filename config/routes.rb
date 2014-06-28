@@ -4,6 +4,8 @@ SplitItVer2::Application.routes.draw do
 
   resources :events
   resources :users
+  match "/calculate" => "home#calculate", :via => :get
+
   # The priority is based upon order of creation:
   # first created -> highest priority.
 
