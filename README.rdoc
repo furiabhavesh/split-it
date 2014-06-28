@@ -1,1 +1,2 @@
-
+Codeship Status
+[ ![Codeship Status for furiabhavesh/split-it](https://www.codeship.io/projects/6492fb30-e115-0131-eb89-628d6b4144ea/status)](https://www.codeship.io/projects/25188)
