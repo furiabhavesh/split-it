@@ -22,6 +22,8 @@ GEM
       activesupport (= 3.2.13)
       arel (~> 3.0.2)
       tzinfo (~> 0.3.29)
+    activerecord-postgresql-adapter (0.0.1)
+      pg
     activeresource (3.2.13)
       activemodel (= 3.2.13)
       activesupport (= 3.2.13)
@@ -124,6 +126,7 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
+  activerecord-postgresql-adapter
   annotate (= 2.4.1.beta1)
   coffee-rails
   debugger
@@ -132,6 +135,7 @@ DEPENDENCIES
   mysql2 (= 0.3.11)
   mysql2psql
   nested_form (= 0.2.3)
+  pg
   rails (= 3.2.13)
   sass-rails
   therubyracer
