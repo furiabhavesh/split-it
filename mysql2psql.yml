@@ -9,11 +9,11 @@ mysql:
 destination:
  # if file is given, output goes to file, else postgres
  postgres:
-  hostname: localhost
+  hostname: ec2-54-197-241-78.compute-1.amazonaws.com
   port: 5432
-  username: root
-  password: 
-  database: split-it-ver2_development
+  username: inuahfdouirihs
+  password: q11Ozn_VkaSzNE33KSkLrQVWf7
+  database: dc0uo4d37hfc88
 
 # if tables is given, only the listed tables will be converted.  leave empty to convert all tables.
 #tables:
