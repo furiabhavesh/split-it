@@ -5,6 +5,7 @@ gem 'mysql2', '0.3.11'
 gem 'nested_form', '0.2.3'
 gem 'friendly_id', '~>4.0.4'
 gem "webrick", "~> 1.3.1"
+gem 'mysql2psql'
 
 # Gems used only for assets and not required
 # in production environments by default.
