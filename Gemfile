@@ -1,7 +1,6 @@
 source 'https://rubygems.org'
 
 gem 'rails', '3.2.13'
-gem 'mysql2', '0.3.11'
 gem 'nested_form', '0.2.3'
 gem 'friendly_id', '~>4.0.4'
 gem "webrick", "~> 1.3.1"
@@ -23,6 +22,7 @@ group :production do
 end
 
 group :development, :test do
+  gem 'mysql2', '0.3.11'
   gem 'debugger'
   gem 'annotate', '2.4.1.beta1'
 end
